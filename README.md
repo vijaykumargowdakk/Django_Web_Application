@@ -1,4 +1,5 @@
 # Django_Procedure
+![NEW](https://github.com/vijaykumargowdakk/Django_workshop/assets/148004089/244b926f-ba09-4ce3-944f-9f01c1fb28db)
 
 *How to add multiple apps in a single project.*   
 *Here are the steps to follow :-*

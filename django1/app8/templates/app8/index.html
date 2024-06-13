@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Message Encoder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label, input, textarea, button {
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Message Encoder</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="message">Enter Message:</label>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+        <button type="submit">Encode</button>
+    </form>
+    {% if encoded_message %}
+    <h2>Original Message:</h2>
+    <p>{{ message }}</p>
+    <h2>Encoded Message:</h2>
+    <p>{{ encoded_message }}</p>
+    {% endif %}
+</body>
+</html>

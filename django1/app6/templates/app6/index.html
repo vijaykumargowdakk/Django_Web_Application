@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ICICI Bank Registration and Savings Account</title>
+</head>
+<body>
+
+    <h2>Customer Registration</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ customer_form.as_p }} 
+        <button type="submit" name="registration">Register</button>
+    </form>
+
+    {% if customer_id %}
+    <h2>Open Savings Account</h2>
+    <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="customer_id" value="{{ customer_id }}">
+        {{ savings_form.as_p }}
+        <button type="submit" name="savings_account">Open Account</button>
+    </form>
+    {% endif %}
+
+</body>
+</html>
+

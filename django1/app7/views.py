@@ -24,7 +24,7 @@ def cheque(request):
     except IOError:
         font = ImageFont.load_default()
 
-    d.text((50, 50), f"Amount: {amount}", fill=(0, 0, 0), font=font)
+    d.text((50, 150), f"Amount: {amount}", fill=(0, 0, 0), font=font)
     d.text((50, 150), f"In Words: {words}", fill=(0, 0, 0), font=font)
 
     buffer = io.BytesIO()

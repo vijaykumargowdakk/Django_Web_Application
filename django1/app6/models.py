@@ -4,8 +4,8 @@ class Customer(models.Model):
     customer_id = models.CharField(max_length=10, unique=True, default="CID_5001")
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
-    aadhaar = models.CharField(max_length=12, unique=True)
-    pincode = models.CharField(max_length=6)
+    aadhaar = models.CharField(max_length=15, unique=True)
+    pincode = models.CharField(max_length=10)
 
     def save(self, *args, **kwargs):
         if not self.pk:  # Check if it's a new customer (no primary key yet)
